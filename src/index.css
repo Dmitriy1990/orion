@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-blue: #243bb9;
+  --secondary-blue: #3f57da;
+  --color-black: #0a0812;
+  --color-grey-100: #eff1f6;
+  --color-grey-200: #bdc4d1;
+  --color-primary-green: #4db29a;
+  --color-primary-pink: #be6aa7;
+  --color-primary-orange: #d8a87c;
+  --color-white: #fff;
+  --color-blue-400: #172136;
+  --color-blue-200: #0054ff;
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply max-w-378 px-5 mx-auto w-full;
+  }
+}
+
+
