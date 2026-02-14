@@ -294,7 +294,9 @@ function App() {
         </div>
       </section>
 
-      <section className="pb-[150px]">
+      <section className="pb-[150px] relative z-1">
+        <div className="absolute w-[800px] h-[800px] bg-[rgba(20,_28,_72,_0.6)] filter blur-[200px] -left-[400px] -bottom-[400px] -z-1"></div>
+        <div className="absolute w-[800px] h-[800px] bg-[rgba(20,_28,_72,_0.6)] filter blur-[200px] -right-[400px] -bottom-[400px] -z-1"></div>
         <div className="container1">
           <div className="mb-10">
             <h2 className="text-center text-[48px] font-normal leading-[112.5%] tracking-tighter bg-gradient-to-r from-[rgba(109,156,246,0.7)] via-[rgba(195,214,251,0.876516)] via-white via-[rgba(208,223,252,0.90333)] to-[rgba(109,156,246,0.7)] bg-clip-text text-transparent mb-5">
@@ -312,7 +314,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="border border-t border-blue-400 pt-8 pb-13">
+      <footer className="border border-t border-blue-400 pt-8 pb-13 relative z-3 bg-black">
         <div className="container1">
           <div className="flex justify-between text-white">
             <LogoFooter />
