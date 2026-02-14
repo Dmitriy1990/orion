@@ -2,20 +2,20 @@ import { useMemo, type ButtonHTMLAttributes } from 'react';
 import clsx from 'clsx';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant: 'primary' | 'outline';
+  variant?: 'primary' | 'outline';
   className?: string;
   disabled?: boolean;
 };
 
 export const Button = (props: Props) => {
-  const { variant, className, disabled, children } = props;
+  const { variant = 'primary', className, disabled, children } = props;
 
   const variantClass = useMemo(() => {
     switch (variant) {
       case 'outline':
-        return '';
+        return 'bg-primary-blue/20 border-primary-blue border-1 hover:bg-primary-blue/50';
       case 'primary':
-        return '';
+        return 'bg-primary-blue hover:bg-secondary-blue';
       default:
         return '';
     }
@@ -23,13 +23,14 @@ export const Button = (props: Props) => {
 
   return (
     <button
+      {...props}
       className={clsx(
-        'inline-flex px-9 py-2.5 cursor-pointer font-semibold min-h-12',
-        disabled && 'cursor-not-allowed',
+        'inline-flex whitespace-nowrap px-9 py-2.5 appearance-none cursor-pointer font-semibold text-base text-white justify-center items-center rounded-[40px] transition-colors',
         className,
+        variantClass,
+        disabled && 'cursor-not-allowed',
       )}
-      disabled={disabled}
-      {...props}>
+      disabled={disabled}>
       {children}
     </button>
   );

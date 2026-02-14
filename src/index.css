@@ -3,7 +3,7 @@
 
 @theme {
   --color-primary-blue: #243bb9;
-  --secondary-blue: #3f57da;
+  --color-secondary-blue: #3f57da;
   --color-black: #0a0812;
   --color-grey-100: #eff1f6;
   --color-grey-200: #bdc4d1;
@@ -18,9 +18,74 @@
 }
 
 @layer components {
-  .container {
+  .container1 {
     @apply max-w-378 px-5 mx-auto w-full;
   }
 }
 
+.border-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(40, 74, 144, 0.35) 0%, rgba(40, 74, 144, 0.14) 100%);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.card-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(33, 66, 136, 0.25) 0%, rgba(8, 20, 43, 0.25) 100%);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(24px);
+  border-radius: 16px;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.border1 {
+  border: 1px solid;
+  border-image: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0) 9.53%,
+    #d9d9d9 28.13%,
+    #d9d9d9 72.72%,
+    rgba(217, 217, 217, 0) 94%
+  );
+  /* border-image: linear-gradient(45deg, #3d79f5, #3d79f5, #3d79f5, #3d79f5) 1 10%; */
+}
+.border2 {
+  border-top: 1px solid;
+  border-image: linear-gradient(45deg, transparent, #3d79f5, #3d79f5, transparent) 1;
+}
+
+.border3 {
+  background-image: linear-gradient(90deg, transparent, #172136, #172136, transparent);
+}
+
+.border4 {
+  background-image: linear-gradient(45deg, transparent, #172136, #172136, transparent);
+}
