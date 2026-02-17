@@ -19,3 +19,6 @@ export { default as img2 } from './img/img2.png';
 export { default as img3 } from './img/img3.png';
 export { default as imgAva } from './img/ava.png';
 export { default as imgAva1 } from './img/ava1.png';
+export { default as IconSuccess } from './icons/icon-success.svg?react';
+export { default as IconError } from './icons/icon-error.svg?react';
+export { default as IconLoad } from './icons/icon-load.svg?react';

@@ -27,8 +27,8 @@ export const Button = (props: Props) => {
       className={clsx(
         'inline-flex whitespace-nowrap px-9 py-2.5 appearance-none cursor-pointer font-semibold text-base text-white justify-center items-center rounded-[40px] transition-colors',
         variantClass,
-        disabled && 'cursor-not-allowed',
         className,
+        disabled && 'cursor-not-allowed! bg-grey-200!',
       )}
       disabled={disabled}>
       {children}
